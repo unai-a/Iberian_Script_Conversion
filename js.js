@@ -55,10 +55,15 @@ document.getElementById("wordForm").addEventListener("submit", function(event) {
             else if (letter === 'e' && (letters[i - 1] === 'k' || letters[i - 1] === 't')) {
                 imagesHTML += "<img src='/images/ke.png' alt='Letter Image'>";
             }
-            // If the current and previous letters are 'r', show the 'rr.png' image
+            // If the current and previous letters are 'r', show the 'rr.png'
             else if (letter === 'r' && letters[i - 1] === 'r') {
                 imagesHTML += "<img src='/images/rr.png' alt='Letter Image'>";
             }
+            // If the next and current letters are 'r', show the 'rr.png'
+            else if (letter === 'r' && letters[i + 1] === 'r') {
+                //Do nothing
+            }
+
             // If the current and previous letters are 'm', show the 'mm.png' image
             else if (letter === 'm' && letters[i - 1] === 'm') {
                 imagesHTML += "<img src='/images/mm.png' alt='Letter Image'>";
