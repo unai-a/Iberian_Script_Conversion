@@ -1,6 +1,6 @@
-# Golang Letter Image Viewer
+# Golang Iberian Script Image Viewer
 
-This project is a simple web application that generates images for each letter in a given word. It's built using Go and JavaScript.
+This project is a simple web application that generates images for each Iberian sscript letter or dual signary in a given word. It's built using Go and JavaScript.
 
 ## Features
 
