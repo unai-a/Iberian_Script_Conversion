@@ -27,7 +27,7 @@ document.getElementById("wordForm").addEventListener("submit", function(event) {
 
         // Check if the letter is 'k' and the next letter is 'a'
         if (letter === 'k' && letters[i + 1] === 'a') {
-            imagesHTML += "<img src='/images/ka.png' alt='Letter Image'>";
+            imagesHTML += "<img src='/repo/images/ka.png' alt='Letter Image'>";
             i++; // Skip the next letter
         }
         // Check if the letter is in the mapping
@@ -36,7 +36,7 @@ document.getElementById("wordForm").addEventListener("submit", function(event) {
             if (Array.isArray(letterMapping[letter])) {
                 for (var j = 0; j < letterMapping[letter].length; j++) {
                     if (letterMapping[letter][j].charAt(1) === letters[i + 1]) {
-                        imagesHTML += "<img src='/images/" + letterMapping[letter][j] + ".png' alt='Letter Image'>";
+                        imagesHTML += "<img src='/repo/images/" + letterMapping[letter][j] + ".png' alt='Letter Image'>";
                         i++; // Skip the next letter
                         break;
                     }
@@ -44,7 +44,7 @@ document.getElementById("wordForm").addEventListener("submit", function(event) {
             } else {
                 // Replace the letter with the corresponding value from the mapping
                 letter = letterMapping[letter];
-                imagesHTML += "<img src='/images/" + letter + ".png' alt='Letter Image'>";
+                imagesHTML += "<img src='/repo/images/" + letter + ".png' alt='Letter Image'>";
             }
         } else {
             // If the letter is 'i' and the previous letter was 'b', skip this letter
@@ -53,11 +53,11 @@ document.getElementById("wordForm").addEventListener("submit", function(event) {
             }
             // If the letter is 'e' and the previous letter was 'k' or 't', show the corresponding image
             else if (letter === 'e' && (letters[i - 1] === 'k' || letters[i - 1] === 't')) {
-                imagesHTML += "<img src='/images/ke.png' alt='Letter Image'>";
+                imagesHTML += "<img src='/repo/images/ke.png' alt='Letter Image'>";
             }
             // If the current and previous letters are 'r', show the 'rr.png'
             else if (letter === 'r' && letters[i - 1] === 'r') {
-                imagesHTML += "<img src='/images/rr.png' alt='Letter Image'>";
+                imagesHTML += "<img src='/repo/images/rr.png' alt='Letter Image'>";
             }
             // If the next and current letters are 'r', show the 'rr.png'
             else if (letter === 'r' && letters[i + 1] === 'r') {
@@ -66,13 +66,13 @@ document.getElementById("wordForm").addEventListener("submit", function(event) {
 
             // If the current and previous letters are 'm', show the 'mm.png' image
             else if (letter === 'm' && letters[i - 1] === 'm') {
-                imagesHTML += "<img src='/images/mm.png' alt='Letter Image'>";
+                imagesHTML += "<img src='/repo/images/mm.png' alt='Letter Image'>";
             }
             else if ((letter === 'k' || letter === 't' || letter === 'b') && (letters[i + 1] === 'a' || letters[i + 1] === 'e' || letters[i + 1] === 'i' || letters[i + 1] === 'o' || letters[i + 1] === 'u')) {
                 // Do nothing
             }
             else {
-                imagesHTML += "<img src='/images/" + letter + ".png' alt='Letter Image'>";
+                imagesHTML += "<img src='/repo/images/" + letter + ".png' alt='Letter Image'>";
             }
         }
     }
